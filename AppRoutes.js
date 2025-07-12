@@ -23,7 +23,7 @@ export const routes = [
 
   {
     path: 'signup',
-    view: 'src/Views/Students/signup.html',
+    view: 'src/Views/Home/signup.html',
     script: ['Modules/AuthManager/Auth.js'],
     // middleware: () => confirm('see details'),
   },
