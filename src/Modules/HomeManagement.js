@@ -16,5 +16,8 @@ export function init(params) {
     
   //  action in html string will work like this
   return {
+    hello:function(){
+      console.log("hello")
+    }
     };
 }
