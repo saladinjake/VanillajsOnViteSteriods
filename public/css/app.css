@@ -1,1 +1,65 @@
 /*Your application css goes here*/
+
+/*buttons classes*/
+.btn {
+  font-family: var(--font-base);
+  padding: 6px 16px;
+  font-size: var(--font-size-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: blue;
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+ background: blue;
+  border-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: blue;
+}
+
+.btn-outline:hover {
+  background: blue;
+  color: #fff;
+}
+
+
+
+/*input component*/
+.input {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-md);
+  font-family: var(--font-base);
+  transition: border-color 0.2s ease;
+  /* width: 100%; */
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+}
+
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}

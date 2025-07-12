@@ -2,14 +2,14 @@ export const routes = [
   // index or home
   {
     path: 'index',
-    view: 'src/Views/index.html',
-    script: ['Modules/HomeManagement.js'],
+    view: 'src/Views/Home/index.html',
+    script: ['./Modules/HomeManagement.js'],
   },
 
   {
     path: 'home',
-    view: 'src/Views/index.html',
-    script: ['Modules/HomeManagement.js'],
+    view: 'src/Views/Home/index.html',
+    script: ['./Modules/HomeManagement.js'],
   },
 
   // auth routes students
@@ -30,7 +30,6 @@ export const routes = [
 
   /** *************   ADMIN  *********** */
 
-  // // admin
   {
     path: 'admin/login',
     view: 'src/Views/Admin/login.html',

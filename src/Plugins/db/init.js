@@ -104,8 +104,6 @@ export const mockUpMongoDatabase = {
       courseId2: [],
     },
   },
-
-
 };
 
 export function seedMockDatabase() {
@@ -114,6 +112,4 @@ export function seedMockDatabase() {
     localStorage.setItem('üsers', JSON.stringify(mockUpMongoDatabase.users));
   }
   // current sessions
-
-  
 }

@@ -128,7 +128,7 @@ async function loadPage(app, route, params = {}, match = null) {
     const doc = parser.parseFromString(htmlText, 'text/html');
     const content = doc.body;
 
-    console.log(content);
+    console.log(doc);
 
     app.innerHTML = '';
     for (const child of content.children) {
