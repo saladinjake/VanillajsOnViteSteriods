@@ -11,7 +11,16 @@ A need to build a simple html based lib for easy route configuration
 Lazy loading javascript files on demand
 My own custom made SPA application starter kit that makes the approach less hassel and developer friendly.
 
+All you need is this
+
 ```
+import './public/css/index.css';
+import { routes } from './AppRoutes';
+import { bootstrapContainers } from './src/bootstrap';
+// bootstrap the mini framework engine
+const app = document.getElementById('app');
+bootstrapContainers(routes).runFramework(app);
+
 export const routes = [
   // index or home
   {
