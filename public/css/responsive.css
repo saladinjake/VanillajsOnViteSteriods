@@ -2,7 +2,6 @@
 
 /*ui aesthetics, responsiveness and smoothening...*/
 /* Responsive variants */
-
 @media (min-width: 640px) {
   .sm\:p-0 { padding: 0rem; }
   .sm\:m-0 { margin: 0rem; }
