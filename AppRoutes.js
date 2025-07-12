@@ -17,14 +17,14 @@ export const routes = [
   {
     path: 'login',
     view: 'src/Views/Home/login.html',
-    script: ['Modules/AuthManager/Auth.js'],
+    script: ['./Modules/AuthManager/Auth.js'],
     // middleware: () => confirm('see details'),
   },
 
   {
     path: 'signup',
     view: 'src/Views/Home/signup.html',
-    script: ['Modules/AuthManager/Auth.js'],
+    script: ['./Modules/AuthManager/Auth.js'],
     // middleware: () => confirm('see details'),
   },
 
@@ -33,6 +33,6 @@ export const routes = [
   {
     path: 'admin/login',
     view: 'src/Views/Admin/login.html',
-    script: ['Modules/AdminManagement/Login.js'],
+    script: ['./Modules/AdminManagement/Login.js'],
   },
 ];
