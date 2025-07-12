@@ -3,9 +3,16 @@
 
 # Project Name
 
-MVP OPEN SOURCE CODE  BASE FOR ED TECH.
+HTML POWERED PAGES  => HPP
+
+### Motivation
+
+A need to build a simple html based lib for easy route configuration
+Lazy loading javascript files on demand
+My own custom made SPA application starter kit that makes the approach less hassel and developer friendly
 
 ---
+
 
 ## 📂 Table of Contents
 
@@ -19,24 +26,19 @@ MVP OPEN SOURCE CODE  BASE FOR ED TECH.
 ---
 
 ## ✨ MVP Features
-- Custom SPA FRAMEWORK PURE VANILLA JS
-- landing page with some courses
-- courses page with search filter functionality, load more after 200 products then show pagination for the rest
-- course detail page with enroll functionality
-- paystack inline payment for course enrolment checkout
-- add to cart features
-- course dashboard
-- authentication - login , signup , forget password, reset password
-- profile management
-- instructor admin course mgt section
-- simple lms with analytics tracking for courses watched
-- course progress tracker 
-- instructor dashboard + basic course authoring tool
-- admin manage users and instructor + analytics
-- user profile edit
-- Business registration and onboarding invite for staff
-- Company assign course to staff
-- course/lms sessions and analytics tracking for course. resume last viewd course
+- Vanilla js custom routing  => Using hashchanges
+- custom made tailwind style css utility classes from scratch
+- Responsive css 
+- Mini render engine to make htmlpages feel like an spa application from  a framwork or lib
+- Mini Engine understand the way bind to action happens under the hood
+``` no more 
+
+    <button onclick="handleClick('hello')">Press Me!!</button>
+
+    rather we have
+  <button data-action="handleClick" data-message="hello">Press Me!!</button>
+
+```
 ---
 
 ## 🚀 Installation
@@ -49,4 +51,4 @@ npm install  # or yarn
 
 
 ### Enjoy the demo
--- for full functionality contact juwavictor@gmail.com
+-- for full functionality check the elearning project sample in the html version

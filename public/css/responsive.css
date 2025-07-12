@@ -1,0 +1,243 @@
+
+
+/*ui aesthetics, responsiveness and smoothening...*/
+/* Responsive variants */
+
+@media (min-width: 640px) {
+  .sm\:p-0 { padding: 0rem; }
+  .sm\:m-0 { margin: 0rem; }
+  .sm\:p-1 { padding: 0.25rem; }
+  .sm\:m-1 { margin: 0.25rem; }
+  .sm\:p-2 { padding: 0.5rem; }
+  .sm\:m-2 { margin: 0.5rem; }
+  .sm\:p-3 { padding: 0.75rem; }
+  .sm\:m-3 { margin: 0.75rem; }
+  .sm\:p-4 { padding: 1rem; }
+  .sm\:m-4 { margin: 1rem; }
+  .sm\:p-5 { padding: 1.25rem; }
+  .sm\:m-5 { margin: 1.25rem; }
+  .sm\:p-6 { padding: 1.5rem; }
+  .sm\:m-6 { margin: 1.5rem; }
+  .sm\:p-7 { padding: 1.75rem; }
+  .sm\:m-7 { margin: 1.75rem; }
+  .sm\:p-8 { padding: 2rem; }
+  .sm\:m-8 { margin: 2rem; }
+  .sm\:p-10 { padding: 2.5rem; }
+  .sm\:m-10 { margin: 2.5rem; }
+  .sm\:p-12 { padding: 3rem; }
+  .sm\:m-12 { margin: 3rem; }
+  .sm\:p-16 { padding: 4rem; }
+  .sm\:m-16 { margin: 4rem; }
+  .sm\:p-20 { padding: 5rem; }
+  .sm\:m-20 { margin: 5rem; }
+  .sm\:p-24 { padding: 6rem; }
+  .sm\:m-24 { margin: 6rem; }
+  .sm\:p-32 { padding: 8rem; }
+  .sm\:m-32 { margin: 8rem; }
+  .sm\:p-40 { padding: 10rem; }
+  .sm\:m-40 { margin: 10rem; }
+  .sm\:p-48 { padding: 12rem; }
+  .sm\:m-48 { margin: 12rem; }
+  .sm\:p-56 { padding: 14rem; }
+  .sm\:m-56 { margin: 14rem; }
+  .sm\:p-64 { padding: 16rem; }
+  .sm\:m-64 { margin: 16rem; }
+    .sm\:mt-24 { margin-top: 6rem; }
+  .sm\:text-primary { color: #1d4ed8; }
+  .sm\:bg-primary { background-color: #1d4ed8; }
+  .sm\:text-secondary { color: #64748b; }
+  .sm\:bg-secondary { background-color: #64748b; }
+  .sm\:text-accent { color: #10b981; }
+  .sm\:bg-accent { background-color: #10b981; }
+  .sm\:text-white { color: #ffffff; }
+  .sm\:bg-white { background-color: #ffffff; }
+  .sm\:text-black { color: #000000; }
+  .sm\:bg-black { background-color: #000000; }
+  .sm\:text-gray-100 { color: #f3f4f6; }
+  .sm\:bg-gray-100 { background-color: #f3f4f6; }
+  .sm\:text-gray-200 { color: #e5e7eb; }
+  .sm\:bg-gray-200 { background-color: #e5e7eb; }
+  .sm\:text-gray-300 { color: #d1d5db; }
+  .sm\:bg-gray-300 { background-color: #d1d5db; }
+  .sm\:text-gray-400 { color: #9ca3af; }
+  .sm\:bg-gray-400 { background-color: #9ca3af; }
+  .sm\:text-gray-500 { color: #6b7280; }
+  .sm\:bg-gray-500 { background-color: #6b7280; }
+  .sm\:text-gray-600 { color: #4b5563; }
+  .sm\:bg-gray-600 { background-color: #4b5563; }
+  .sm\:text-gray-700 { color: #374151; }
+  .sm\:bg-gray-700 { background-color: #374151; }
+  .sm\:text-gray-800 { color: #1f2937; }
+  .sm\:bg-gray-800 { background-color: #1f2937; }
+  .sm\:text-gray-900 { color: #111827; }
+  .sm\:bg-gray-900 { background-color: #111827; }
+  .sm\:w-full{ width: 100%}
+
+ .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  /* .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } */
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .sm\:hidden { display: none; }
+
+  .sm\:flex-row { flex-direction: row; }
+      
+  .sm\:flex { display: flex; }
+.sm\:flex-wrap { flex-wrap: wrap; }
+.sm\:items-start { align-items: flex-start;}
+.sm\:inline-flex { display: inline-flex; }
+.sm\:items-left{align-items: left;}
+.sm\:items-center { align-items: center; }
+.sm\:justify-between { justify-content: space-between; }
+.sm\:justify-center { justify-content: center; }
+.sm\:flex-col { flex-direction: column; }
+.sm\:flex-row { flex-direction: row; }
+.sm\:block { display: block; }
+.sm\flex-no-wrap{ flex-wrap: nowrap;}
+.sm\:justify-start { justify-content: flex-start; }
+.sm\:justify-end { justify-content: flex-end; }
+
+   .sm\visible { visibility: visible; }
+.sm\invisible { visibility: hidden; }
+   
+}
+
+
+ 
+
+
+
+@media (min-width: 768px) {
+ 
+  .md\:p-0 { padding: 0rem; }
+  .md\:m-0 { margin: 0rem; }
+  .md\:p-1 { padding: 0.25rem; }
+  .md\:m-1 { margin: 0.25rem; }
+  .md\:p-2 { padding: 0.5rem; }
+  .md\:m-2 { margin: 0.5rem; }
+  .md\:p-3 { padding: 0.75rem; }
+  .md\:m-3 { margin: 0.75rem; }
+  .md\:p-4 { padding: 1rem; }
+  .md\:m-4 { margin: 1rem; }
+  .md\:p-5 { padding: 1.25rem; }
+  .md\:m-5 { margin: 1.25rem; }
+  .md\:p-6 { padding: 1.5rem; }
+  .md\:m-6 { margin: 1.5rem; }
+  .md\:p-7 { padding: 1.75rem; }
+  .md\:m-7 { margin: 1.75rem; }
+  .md\:p-8 { padding: 2rem; }
+  .md\:m-8 { margin: 2rem; }
+  .md\:p-10 { padding: 2.5rem; }
+  .md\:m-10 { margin: 2.5rem; }
+  .md\:p-12 { padding: 3rem; }
+  .md\:m-12 { margin: 3rem; }
+  .md\:p-16 { padding: 4rem; }
+  .md\:m-16 { margin: 4rem; }
+  .md\:p-20 { padding: 5rem; }
+  .md\:m-20 { margin: 5rem; }
+  .md\:p-24 { padding: 6rem; }
+  .md\:m-24 { margin: 6rem; }
+  .md\:p-32 { padding: 8rem; }
+  .md\:m-32 { margin: 8rem; }
+  .md\:p-40 { padding: 10rem; }
+  .md\:m-40 { margin: 10rem; }
+  .md\:p-48 { padding: 12rem; }
+  .md\:m-48 { margin: 12rem; }
+  .md\:p-56 { padding: 14rem; }
+  .md\:m-56 { margin: 14rem; }
+  .md\:p-64 { padding: 16rem; }
+  .md\:m-64 { margin: 16rem; }
+  .md\:text-primary { color: #1d4ed8; }
+  .md\:bg-primary { background-color: #1d4ed8; }
+  .md\:text-secondary { color: #64748b; }
+  .md\:bg-secondary { background-color: #64748b; }
+  .md\:text-accent { color: #10b981; }
+  .md\:bg-accent { background-color: #10b981; }
+  .md\:text-white { color: #ffffff; }
+  .md\:bg-white { background-color: #ffffff; }
+  .md\:text-black { color: #000000; }
+  .md\:bg-black { background-color: #000000; }
+  .md\:text-gray-100 { color: #f3f4f6; }
+  .md\:bg-gray-100 { background-color: #f3f4f6; }
+  .md\:text-gray-200 { color: #e5e7eb; }
+  .md\:bg-gray-200 { background-color: #e5e7eb; }
+  .md\:text-gray-300 { color: #d1d5db; }
+  .md\:bg-gray-300 { background-color: #d1d5db; }
+  .md\:text-gray-400 { color: #9ca3af; }
+  .md\:bg-gray-400 { background-color: #9ca3af; }
+  .md\:text-gray-500 { color: #6b7280; }
+  .md\:bg-gray-500 { background-color: #6b7280; }
+  .md\:text-gray-600 { color: #4b5563; }
+  .md\:bg-gray-600 { background-color: #4b5563; }
+  .md\:text-gray-700 { color: #374151; }
+  .md\:bg-gray-700 { background-color: #374151; }
+  .md\:text-gray-800 { color: #1f2937; }
+  .md\:bg-gray-800 { background-color: #1f2937; }
+  .md\:text-gray-900 { color: #111827; }
+  .md\:bg-gray-900 { background-color: #111827; }
+
+
+  .md\:flex { display: flex; }
+.md\:flex-wrap { flex-wrap: wrap; }
+   .md\flex-no-wrap{ flex-wrap: nowrap;}
+.md\:items-start { align-items: flex-start;}
+.md\:inline-flex { display: inline-flex; }
+.md\:items-left{align-items: left;}
+.md\:items-center { align-items: center; }
+.md\:justify-between { justify-content: space-between; }
+.md\:justify-center { justify-content: center; }
+.md\:flex-col { flex-direction: column; }
+.md\:flex-row { flex-direction: row; }
+.md\:justify-start { justify-content: flex-start; }
+.md\:justify-end { justify-content: flex-end; }
+.md\:block { display: block; }
+   
+.md\:hidden { display: none; }
+  .md\:w-1\/2 { width: 50%; }
+  .md\:w-3\/4   { width: 75%; }
+  .md\:w-25 { width: 25%; }
+   .md\:w-33 { width: 33%; }
+      .md\:w-38 { width: 48%; }
+   .md\:w-18 { width: 18%; }
+  .md\:w-64 { width: 16rem; }  /* 256px */
+.md\:w-96 { width: 24rem; }  /* 384px */
+  .md\:flex-row { flex-direction: row; }
+  .md\:text-left { text-align: left; }
+  .md\:text-5xl { font-size: 3rem; }
+  .md\:w-full{ width: 100%}
+  .md\:mx-auto { margin-left: auto; margin-right: auto; }
+  
+   .md\visible { visibility: visible; }
+.md\invisible { visibility: hidden; }
+
+
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  /* .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } */
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+}
+
+
+
+
+
+
+
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+.order-5 { order: 5; }
+
+.sm\\:order-1 { }
+.sm\\:order-2 { }
+.sm\\:order-3 { }
+.sm\\:order-4 { }
+.sm\\:order-5 { }
+
+@media (min-width: 640px) {
+  .sm\\:order-1 { order: 1; }
+  .sm\\:order-2 { order: 2; }
+  .sm\\:order-3 { order: 3; }
+  .sm\\:order-4 { order: 4; }
+  .sm\\:order-5 { order: 5; }
+}
