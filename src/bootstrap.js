@@ -1,6 +1,7 @@
 import { routes } from '../AppRoutes';
 import { globalMiddleware } from './Plugins/utils/middlewares/middlewares';
 
+const modules = import.meta.glob('/src/Modules/**/*.js'); // adjust path to match source
 const DEFAULT_ROUTE = 'index';
 
 const loadedScriptSrcs = new Set();
@@ -89,7 +90,16 @@ function getRouteAndParams() {
 }
 
 const runScriptModule = async (scriptPath, params, app) => {
-  const module = await import(`./${scriptPath}?t=${Date.now()}`);
+  const key = Object.keys(modules).find((k) =>
+    k.includes(`/Modules/${scriptPath}`),
+  );
+
+  if (!key) {
+    console.error(`[Framework] Cannot find module: ${scriptPath}`);
+    return;
+  }
+
+  const module = await modules[key]();
   if (typeof module.init === 'function') {
     const actions = module.init(params);
     if (typeof actions === 'object') bindActions(app, actions);
