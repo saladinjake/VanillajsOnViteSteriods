@@ -16,7 +16,10 @@ function getInputEntries(dir, baseDir = dir) {
     if (stat.isDirectory()) {
       Object.assign(entries, getInputEntries(fullPath, baseDir));
     } else if (/\.(js|ts|jsx|tsx|html)$/.test(file)) {
-      const entryName = path.relative(baseDir, fullPath).replace(/\\/g, '/').replace(/\.(js|ts|jsx|tsx|html)$/, '');
+      const entryName = path
+        .relative(baseDir, fullPath)
+        .replace(/\\/g, '/')
+        .replace(/\.(js|ts|jsx|tsx|html)$/, '');
       entries[entryName] = resolve(fullPath);
     }
   }
@@ -35,18 +38,20 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        ...getInputEntries('src'), // Include all JS/TS/HTML in src/
+        ...getInputEntries('src'),
       },
       output: {
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-        entryFileNames: '[name].js',
+        // Preserve directory structure in dist/assets
+        entryFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
 
         manualChunks(id) {
           if (id.includes('node_modules')) {
             const segments = id.split('node_modules/')[1].split('/');
-            return segments[0].startsWith('@') ? `${segments[0]}/${segments[1]}` : segments[0];
+            return segments[0].startsWith('@')
+              ? `${segments[0]}/${segments[1]}`
+              : segments[0];
           }
           return null;
         },
