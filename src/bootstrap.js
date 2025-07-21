@@ -1,7 +1,8 @@
 import { routes } from '../AppRoutes';
 import { globalMiddleware } from './Plugins/utils/middlewares/middlewares';
 
-const modules = import.meta.glob('/src/Modules/**/*.js'); // adjust path to match source
+const modules = import.meta.glob('./Modules/**/*.js'); // or './Modules/**/*.js' depending on location
+
 const DEFAULT_ROUTE = 'index';
 
 const loadedScriptSrcs = new Set();
@@ -90,16 +91,14 @@ function getRouteAndParams() {
 }
 
 const runScriptModule = async (scriptPath, params, app) => {
-  const key = Object.keys(modules).find((k) =>
-    k.includes(`/Modules/${scriptPath}`),
-  );
+  const normalized = `./Modules/${scriptPath}`; // e.g. 'HomeManagement.js'
+  const loader = modules[normalized];
 
-  if (!key) {
-    console.error(`[Framework] Cannot find module: ${scriptPath}`);
-    return;
+  if (!loader) {
+    throw new Error(`[Framework] Cannot find module: ${normalized}`);
   }
 
-  const module = await modules[key]();
+  const module = await loader(); // lazy-load
   if (typeof module.init === 'function') {
     const actions = module.init(params);
     if (typeof actions === 'object') bindActions(app, actions);

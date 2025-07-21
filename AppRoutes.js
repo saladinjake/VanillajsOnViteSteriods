@@ -3,13 +3,13 @@ export const routes = [
   {
     path: 'index',
     view: 'src/Views/Home/index.html',
-    script: ['./Modules/HomeManagement.js'],
+    script: ['HomeManagement.js'],
   },
 
   {
     path: 'home',
     view: 'src/Views/Home/index.html',
-    script: ['./Modules/HomeManagement.js'],
+    script: ['HomeManagement.js'],
   },
 
   // auth routes students
@@ -17,14 +17,14 @@ export const routes = [
   {
     path: 'login',
     view: 'src/Views/Home/login.html',
-    script: ['./Modules/AuthManager/Auth.js'],
+    script: ['AuthManager/Auth.js'],
     // middleware: () => confirm('see details'),
   },
 
   {
     path: 'signup',
     view: 'src/Views/Home/signup.html',
-    script: ['./Modules/AuthManager/Auth.js'],
+    script: ['AuthManager/Auth.js'],
     // middleware: () => confirm('see details'),
   },
 
@@ -33,6 +33,6 @@ export const routes = [
   {
     path: 'admin/login',
     view: 'src/Views/Admin/login.html',
-    script: ['./Modules/AdminManagement/Login.js'],
+    script: ['AdminManagement/Login.js'],
   },
 ];
