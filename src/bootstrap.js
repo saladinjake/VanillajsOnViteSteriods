@@ -1,7 +1,7 @@
 import { routes } from '../AppRoutes';
 import { globalMiddleware } from './Plugins/utils/middlewares/middlewares';
 
-const modules = import.meta.glob('./Modules/**/*.js'); // or './Modules/**/*.js' depending on location
+const modules = import.meta.glob('/src/Modules/**/*.js');
 
 const DEFAULT_ROUTE = 'index';
 
@@ -90,18 +90,28 @@ function getRouteAndParams() {
   return { path, params };
 }
 
-const runScriptModule = async (scriptPath, params, app) => {
-  const normalized = `./Modules/${scriptPath}`; // e.g. 'HomeManagement.js'
-  const loader = modules[normalized];
+export const runScriptModule = async (scriptName, params = {}, app = {}) => {
+  const path = `/src/Modules/${scriptName}`;
+  const loader = modules[path];
 
   if (!loader) {
-    throw new Error(`[Framework] Cannot find module: ${normalized}`);
+    console.error(`[Framework] Cannot find module: ${scriptName}`);
+    return;
   }
 
-  const module = await loader(); // lazy-load
-  if (typeof module.init === 'function') {
-    const actions = module.init(params);
-    if (typeof actions === 'object') bindActions(app, actions);
+  try {
+    const module = await loader();
+
+    if (typeof module.init === 'function') {
+      const actions = module.init(params, app);
+      if (actions && typeof actions === 'object') {
+        bindActions(app, actions); // assume bindActions is defined elsewhere
+      }
+    } else {
+      console.warn(`[Framework] Module ${scriptName} has no 'init' method`);
+    }
+  } catch (err) {
+    console.error(`[Framework] Failed to load ${scriptName}`, err);
   }
 };
 
